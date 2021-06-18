@@ -1,0 +1,42 @@
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Fuscão Preto</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-text class="ion-text-center">
+            <h3>Catálogo</h3>
+        </ion-text>
+        <ion-list>
+            <ion-item *ngFor="let produto of produtos; let i = index" [routerLink]="['/detalhe-produto', i]">
+                <ion-avatar slot="start">
+
+                </ion-avatar>
+                <ion-label>
+                    <!-- <h2><b>Código:</b>
+                      {{produto.cod}}
+                    </h2> -->
+                    <h2><b>Nome:</b>
+                        {{produto.desc}}
+                    </h2>
+                    <!-- <h2>
+                        <b>Quantidade Disponível:</b>
+                        {{produto.qtdedisponivel}}
+                        <br>
+                    </h2> -->
+                    <!-- <h2>
+                        <b>Quantidade Máxima:</b>
+                        {{produto.maxima}}
+                        <br>
+                        <b>Quantidade Mínima:</b>
+                        {{produto.minima}}
+                    </h2> -->
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</div>

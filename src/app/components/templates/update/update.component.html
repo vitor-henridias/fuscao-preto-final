@@ -1,0 +1,45 @@
+<div class="ion-page">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-toggle>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+        </ion-menu-toggle>
+      </ion-buttons>
+      <ion-title>Fuscão Preto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen class='ion-padding'>
+    <ion-text class="ion-padding">
+      <h1>Editar Produtos</h1>
+    </ion-text>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <ion-list>
+        <ion-item>
+          <th>
+            ID:({{produto?.id}})
+            <br>
+            Código:({{produto?.cod}})
+            <br>
+            Nome:{{produto?.desc}}
+            <br>
+            Quantidade: {{produto?.qtdedisponivel}}
+            <br>
+            Quantidade Máxima: {{produto?.maxima}}
+            <br>
+            Quantidade Mínima:{{produto?.minima}}
+            <hr>
+            <label>Insira a quantidade que deseja editar!</label>
+            <input type="number" class="form-contro col-md-8" name="qtde" id="qtde" value="" [(ngModel)]="qtde"
+              required>
+            <br>
+            <ion-button expand="block" (click)="adicionar()"><ion-icon name="add-circle-outline"></ion-icon>Adicionar</ion-button>           
+            <ion-button expand="block" ><ion-icon name="close-circle-outline"></ion-icon>Remover</ion-button>   
+          </th>
+        </ion-item>
+      </ion-list>
+    </form>
+  </ion-content>
+</div>

@@ -1,0 +1,18 @@
+.h1 {
+    font-size: 30px;
+    color: white;
+    margin-left: 15px;
+}
+
+.a1 {
+    color: white;
+    font-size: 17px;
+}
+
+.n {
+    background-color: blue;
+}
+
+.box {
+    width: 17%;
+}
