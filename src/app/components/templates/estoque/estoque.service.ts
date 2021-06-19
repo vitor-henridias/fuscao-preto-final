@@ -35,7 +35,7 @@ export class EstoqueService {
     let produto = new Estoque(id, cod, desc, qtdedisponivel + qtde, maxima, minima)
 
     const url = `${this.baseUrl}/${id}`
-    return this.http.put<Estoque>(this.baseUrl, produto)
+    return this.http.put<Estoque>(url, produto)
   }
 
 }

@@ -37,7 +37,7 @@ export class UpdateComponent implements OnInit {
       console.log(this.produto.id)
     });
   }
-  
+
   // adicionar(): void {
   //   if (this.produto) {
   //     this.estoqueService.editProduto(this.produto.id ,this.produto.cod, this.produto.desc, this.produto.qtdedisponivel, this.produto.minima, this.produto.maxima, this.qtde)
@@ -48,9 +48,9 @@ export class UpdateComponent implements OnInit {
   //   }
   // }
 
-  adicionar(): void {
+  adicionar(sub : number): void {
     if (this.produto) {
-      this.estoqueService.editProduto(this.produto.id, this.produto.cod, this.produto.desc, this.produto.qtdedisponivel, this.produto.minima, this.produto.maxima, this.qtde)
+      this.estoqueService.editProduto(this.produto.id, this.produto.cod, this.produto.desc, this.produto.qtdedisponivel, this.produto.maxima, this.produto.minima, this.qtde * sub)
         .subscribe((produto) => {
           this.produto = produto
         })
