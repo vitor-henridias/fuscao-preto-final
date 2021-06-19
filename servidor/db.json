@@ -1,0 +1,44 @@
+{
+  "produtos": [
+    {
+      "id": 0,
+      "desc": "Pneu",
+      "cod": 1234,
+      "qtdedisponivel": 12,
+      "maxima": 200,
+      "minima": 50
+    },
+    {
+      "id": 1,
+      "desc": "Volante",
+      "cod": 4321,
+      "qtdedisponivel": 56,
+      "maxima": 110,
+      "minima": 60
+    },
+    {
+      "id": 2,
+      "desc": "Parabrisa",
+      "cod": 4002,
+      "qtdedisponivel": 23,
+      "maxima": 50,
+      "minima": 25
+    },
+    {
+      "id": 3,
+      "desc": "Banco",
+      "cod": 9867,
+      "qtdedisponivel": 558,
+      "maxima": 72,
+      "minima": 315
+    },
+    {
+      "id": 4,
+      "cod": 8922,
+      "desc": "pinga",
+      "qtdedisponivel": 51,
+      "maxima": 510,
+      "minima": 51
+    }
+  ]
+}

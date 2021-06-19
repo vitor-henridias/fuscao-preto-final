@@ -37,6 +37,7 @@ export class UpdateComponent implements OnInit {
       console.log(this.produto.id)
     });
   }
+  
   // adicionar(): void {
   //   if (this.produto) {
   //     this.estoqueService.editProduto(this.produto.id ,this.produto.cod, this.produto.desc, this.produto.qtdedisponivel, this.produto.minima, this.produto.maxima, this.qtde)
