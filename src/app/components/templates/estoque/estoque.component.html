@@ -12,7 +12,7 @@
           <h3>Estoque</h3>
       </ion-text>
       <ion-list>
-          <ion-item *ngFor="let produto of produtos; let i = index" [routerLink]="['/update-produto', i]">
+          <ion-item *ngFor="let produto of produtos;" [routerLink]="['/update-produto', produto.id]">
               <ion-avatar slot="start">
 
               </ion-avatar>

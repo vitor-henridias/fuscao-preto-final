@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AddprodutosComponent } from './components/templates/addprodutos/addprodutos.component';
 import { CatalogoComponent } from './components/templates/catalogo/catalogo.component';
-import { DetalheComponent } from './components/templates/detalhe/detalhe.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
     EstoqueComponent,
     AddprodutosComponent,
     CatalogoComponent,
-    DetalheComponent
   ],
   imports: [
     BrowserModule,

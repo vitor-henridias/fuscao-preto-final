@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EstoqueService } from '../estoque/estoque.service';
 
 @Component({
@@ -7,9 +8,9 @@ import { EstoqueService } from '../estoque/estoque.service';
   styleUrls: ['./addprodutos.component.css']
 })
 export class AddprodutosComponent implements OnInit {
-  router: any;
+  
 
-  constructor(private listaestoque : EstoqueService) { 
+  constructor(private listaestoque : EstoqueService, private router : Router) { 
 
   }
 
@@ -30,11 +31,14 @@ export class AddprodutosComponent implements OnInit {
     maxima = form.value.maxima
     minima = form.value.minima
 
-    this.listaestoque.addProduto(id, cod, desc, qtdedisponivel, maxima, minima).subscribe(() =>{
-      this.router.navigate(['/produtos']);
-    })
+    // console.log(id)
 
+    this.listaestoque.addProduto(id, cod, desc, qtdedisponivel, maxima, minima).subscribe(() =>{
+      
+    })
+    
     alert("Item Cadastrado com sucesso!")
+    this.router.navigate([''])
   }
 
 }

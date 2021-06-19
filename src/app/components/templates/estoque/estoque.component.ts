@@ -20,6 +20,11 @@ export class EstoqueComponent implements OnInit {
   ionViewWillEnter() {
     this.estoqueService.getProdutos().subscribe(produtos => {
       this.produtos = produtos
+      for (let produto of this.produtos) {
+        if (produto.id > this.estoqueService.maxid) {
+          this.estoqueService.maxid = produto.id
+        }
+      }
     })
   }
 }

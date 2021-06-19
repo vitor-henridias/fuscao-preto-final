@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class EstoqueService {
 
   baseUrl = "http://localhost:3000/produtos"
+  maxid = 0;
 
   constructor(private http: HttpClient) {
 
@@ -16,6 +17,7 @@ export class EstoqueService {
 
   getProdutos(): Observable<Estoque[]> {
     return this.http.get<Estoque[]>(this.baseUrl)
+    
   }
 
   getProduto(id: number): Observable<Estoque> {
@@ -24,7 +26,8 @@ export class EstoqueService {
   }
 
   addProduto(id: number, cod: number, desc: string, qtdedisponivel: number, maxima: number, minima: number): Observable<Estoque> {
-    let produto = new Estoque(id, cod, desc, qtdedisponivel, maxima, minima)
+    let produto = new Estoque(this.maxid + 1, cod, desc, qtdedisponivel, maxima, minima)
+    this.maxid = this.maxid + 1
     return this.http.post<Estoque>(this.baseUrl, produto)
   }
 
